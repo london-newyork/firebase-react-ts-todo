@@ -4,9 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { Route, BrowserRouter } from "react-router-dom"
+import { Login } from "./Login"
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <>
+        <Route exact path="/">
+          <App />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+      </>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
